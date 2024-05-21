@@ -22,6 +22,7 @@ public class JwtAccessDeniedHandler implements AccessDeniedHandler {
         /* 알맞은 내용 작성 */
         response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(objectMapper.writeValueAsString("인가 실패"));
+        response.getWriter().write("인가 실패");
+
     }
 }
